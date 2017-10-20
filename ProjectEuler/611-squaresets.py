@@ -59,6 +59,7 @@ class Iterator611():
 				self.SetOfSquare.add(square)
 				self.count+=1;
 
+		#Estimate the time
 		if(np.floor(np.log10(self.N)) == np.log10(self.N)):
 			cur_time = datetime.datetime.now()
 			exection_time = (cur_time - self.startTime).total_seconds()
@@ -87,7 +88,7 @@ class Iterator611():
 
 				(self.x,self.y) = self.nextElem()
 
-		return ((self.x,self.y),self.SetOfSquare,self.count, self.notFinishedCol)
+		return (self.count)
 
 	def nextElem(self):
 		if self.notFinishedCol:
@@ -97,8 +98,8 @@ class Iterator611():
 			return (self.x+1, 1)
 
 # Run the program		
-for (pos,n,c,cols) in Iterator611(N):
+for c in Iterator611(N):
 	#print(pos,c)
-	S = n
+	S = c
 print(c)
 
